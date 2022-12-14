@@ -7,4 +7,6 @@ T-shirt White - will create 2 cards always
 
 Sometimes it takes 5-10 seconds for API to return Data after clicking search.
 
+Never remove the first item from My Inventory list if you have multiple items added, it's all has to do with "active" status in carousel. After adding items to the my inventory list, you can always remove any other item except the first one. 
+
 I left multiple comments in the main.js file that will explain things more clearly.
