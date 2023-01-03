@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Closet</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">        
+        <div class="row" id ="row1">            
+            <div class="col-3" id = "div1">                
+                    <form id="form">
+                        <div class="add-an-item">
+                            <h3>Add Items  </h3>
+                            <select name="item_id" class="form-select w-100" aria-label="Default select example">
+                                <option selected>Select An Item</option>
+                                 <option value="T-Shirt">T-Shirt</option>
+                                 <option value="Pants">Pants</option>                                        
+                            </select>                                            
+                            <select name="color_id" class="form-select w-100" aria-label="Default select example">
+                                <option selected>Select Color</option>
+                                <option value1="white">White</option>
+                                <option value1="red">Red</option>
+                                 <option value1="blue">Blue</option>
+                                 <option value1="green">Green</option>                    
+                            </select>                                    
+                            <div class="input-group mb-3 w-100">
+                                 <input type="text" class="form-control" id = "priceInput" autocomplete="off" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="price in $">
+                            </div>                                
+                             <div class="input-group w-100">
+                                <input id="files" type="file" class="form-control w-100" accept="image/jpeg, image/png, image/jpg">                                        
+                            </div>  
+                            <button type="submit" class="btn btn-primary ">Submit</button>                                
+                        </div>
+                    </form>                  
+                <img src = "" id="result" class="img-thumbnail w-100" >                 
+            </div>        
+            <div class="col-4" id = "div2">                
+                <h3>My Inventory</h3>
+                <div class="carousel slide w-100" data-bs-ride="carousel" id="carouselExampleControls">                    
+                    <div class="carousel-inner w-100">                                                                
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-5" id = "div3">
+                <h3>List View</h3>                
+                <ol class = "listInventory"></ol>                
+                <input type="text" autocomplete = "off" class = "removeNumber w-50" id = "removeNumber" placeholder="enter # to ">
+                <button type="button" class="btn btn-danger" id = "removeButton">Remove</button>
+            </div>
+        </div>
+         <!-- ROW  2  ------------------------------------- -->
+        <div class="row" id ="row2"> 
+
+            <div class="col-2" id = "div4">
+                <h3>Search Target</h3>                   
+                <input type="text" class="form-control w-100" id = "searchItem" autocomplete="off"  placeholder="enter an item:">
+                <input type="text" class="form-control w-100" id = "searchColor" autocomplete="off"  placeholder="enter a color"> 
+                <select id="sexSelect" class="form-select w-100" aria-label="Default select example">
+                    <option selected>M/F/Boys/Girls</option>
+                     <option value="Men">Men</option>
+                     <option value="Women">Women</option>
+                     <option value="Boys">Boys</option>
+                     <option value="Girls">Girls</option>                                         
+                </select>                       
+                <button id = "getAPI">Search</button>
+            </div>
+        </div>
+
+    </div>
+        
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
